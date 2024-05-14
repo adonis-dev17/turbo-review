@@ -33,22 +33,30 @@ let tool = ['rock', 'paper', 'scissors'];
 function selectRandomTool() {
   let randomIndex = Math.random();
   if (randomIndex < 0.33) {
-    console.log('Rock');
+    return 'Rock';
   }else if (randomIndex < 0.66) {
-    console.log('Scissors');
+    return 'Scissors';
   }else {
-    console.log('Paper');
+    return'Paper';
   }
 }
-selectRandomTool()
-selectRandomTool()
-selectRandomTool()
 
 // *Conditionals*
 //3. Create a function that takes in a choice (rock, paper, or scissors) and determines if they won a game of rock paper scissors against a bot using the above function
-// function meVsBot () {
-//   let selectTool = document.querySelector('#').value
-// }
+
+function meVersusBot(playersChoice) {
+  let botChoice = selectRandomTool();
+
+  if ((playersChoice === 'Rock' && botChoice === 'Scissors' || playersChoice === 'Scissors' && botChoice === 'Paper' || playersChoice === 'Paper' && botChoice === 'Rock')) {
+    console.log('You win!');
+  } else if (playersChoice === botChoice) {
+    console.log('You tied!');
+  } else {
+    console.log('You lose!');
+  }
+}
+
+
 
 //*Loops*
 //Create a function that takes an array of choices. Play the game x times where x is the number of choices in the array. Print the results of each game to the console.
