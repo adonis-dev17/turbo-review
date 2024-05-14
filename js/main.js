@@ -5,9 +5,13 @@ let favDrink = ' Coke ' ;
 favDrink = favDrink.trim();
 console.log(favDrink);
 
-// //Declare a variable, assign it a string of multiple words, and check to see if one of the words is "apple".
-let fruits = "Eve gave apple to Adam."
-console.log(fruits.search('apple'));
+//Declare a variable, assign it a string of multiple words, and check to see if one of the words is "apple".
+let fruits = "Eve gave bananaapplepapaya to Adam."
+if (fruits.search('apple') !== -1) {
+  console.log('Yes, there is "apple" in there.');
+} else {
+  console.log('No "apple" in there.');
+}
 
 
 // *Functions*
